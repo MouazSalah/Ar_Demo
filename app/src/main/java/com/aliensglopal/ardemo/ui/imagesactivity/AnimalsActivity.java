@@ -32,7 +32,7 @@ public class AnimalsActivity extends AppCompatActivity
             if (o instanceof String) {
                 String text = o.toString();
                 //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
