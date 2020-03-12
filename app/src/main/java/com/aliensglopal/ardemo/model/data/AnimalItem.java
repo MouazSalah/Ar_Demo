@@ -10,11 +10,12 @@ import com.bumptech.glide.Glide;
 /**
  * Created by MahmoudAyman on 2/14/2020.
  **/
-public class AnimalItem {
+public class AnimalItem
+{
     private int id;
     private String name;
     private boolean selected;
-    private String imageName;
+    private String imageUrl;
 
     public int getId() {
         return id;
@@ -41,11 +42,11 @@ public class AnimalItem {
     }
 
     public String getImageName() {
-        return imageName;
+        return imageUrl;
     }
 
     public void setImageName(String imageName) {
-        this.imageName = imageName;
+        this.imageUrl = imageName;
     }
 
     // important code for loading image here
@@ -55,7 +56,6 @@ public class AnimalItem {
                 .load(imageURL)
                 .placeholder(R.drawable.biology)
                 .into(imageView);
-
     }
 
 }

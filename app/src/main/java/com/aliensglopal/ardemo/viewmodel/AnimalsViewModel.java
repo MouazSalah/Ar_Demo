@@ -11,14 +11,15 @@ public class AnimalsViewModel extends BaseViewModel
 {
    public ProductsAdapter productsAdapter = new ProductsAdapter();
 
-   private int images[] = {R.drawable.ic_launcher_foreground, R.drawable.biology, R.drawable.atom_jpg, R.drawable.astronaut_png,
-                            R.drawable.beaker_png, R.drawable.caurve_bg};
-   private String names[] = {"rabbit", "fox", "mouse", "rabbit", "fox", "mouse"};
-    private String imageNames[] = {"ArcticFox_Posed.sfp", "Mesh_Dinosaur.sfb","ArcticFox_Posed.sfp", "Mesh_Dinosaur.sfb", "ArcticFox_Posed.sfp", "Mesh_Dinosaur.sfb"};
+   private int images[] = {R.drawable.flower_png, R.drawable.palm_png, R.drawable.dolphin_png, R.drawable.elephant_png,
+                              R.drawable.beaker_png, R.drawable.skel};
+   private String names[] = {"Flower", "Palm", "Dolphin", "Elephant", "Beaker", "Skelton"};
+    private String imageNames[] = {"Flower.sfb", "Palm.sfb", "dolphin.sfb", "elephant.sfb", "Beaker.sfb", "skel.sfb"};
+
+
 
     public AnimalsViewModel()
     {
-        setValue("getting data");
         getData();
     }
 
@@ -31,6 +32,7 @@ public class AnimalsViewModel extends BaseViewModel
             AnimalItem item = new AnimalItem();
             item.setId(images[i]);
             item.setName(names[i]);
+            item.setImageName(imageNames[i]);
             item.setSelected(false);
             productItems.add(item);
         }

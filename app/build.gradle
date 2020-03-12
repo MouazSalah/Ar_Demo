@@ -68,6 +68,11 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    // library for circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
 }
 
 
@@ -75,3 +80,105 @@ sceneform.asset('sampledata/ArcticFox_Posed.obj',
         'default',
         'sampledata/ArcticFox_Posed.sfa',
         'src/main/assets/ArcticFox_Posed')
+
+sceneform.asset('sampledata/astronaut.obj',
+        'default',
+        'sampledata/astronaut.sfa',
+        'src/main/assets/astronaut')
+
+sceneform.asset('sampledata/satellite.obj',
+        'default',
+        'sampledata/satellite.sfa',
+        'src/main/assets/satellite')
+
+sceneform.asset('sampledata/spaceShuttle.obj',
+        'default',
+        'sampledata/spaceShuttle.sfa',
+        'src/main/assets/spaceShuttle')
+
+sceneform.asset('sampledata/dolphin.obj',
+        'default',
+        'sampledata/dolphin.sfa',
+        'src/main/assets/dolphin')
+
+sceneform.asset('sampledata/elephant.obj',
+        'default',
+        'sampledata/elephant.sfa',
+        'src/main/assets/elephant')
+
+sceneform.asset('sampledata/ferret.obj',
+        'default',
+        'sampledata/ferret.sfa',
+        'src/main/assets/ferret')
+
+sceneform.asset('sampledata/cow.obj',
+        'default',
+        'sampledata/cow.sfa',
+        'src/main/assets/cow')
+
+sceneform.asset('sampledata/greategret.obj',
+        'default',
+        'sampledata/greategret.sfa',
+        'src/main/assets/greategret')
+
+
+sceneform.asset('sampledata/brain.obj',
+        'default',
+        'sampledata/brain.sfa',
+        'src/main/assets/brain')
+
+sceneform.asset('sampledata/heart.obj',
+        'default',
+        'sampledata/heart.sfa',
+        'src/main/assets/heart')
+
+sceneform.asset('sampledata/skel.obj',
+        'default',
+        'sampledata/skel.sfa',
+        'src/main/assets/skel')
+
+sceneform.asset('sampledata/boulder.obj',
+        'default',
+        'sampledata/boulder.sfa',
+        'src/main/assets/boulder')
+
+sceneform.asset('sampledata/nature.obj',
+        'default',
+        'sampledata/nature.sfa',
+        'src/main/assets/nature')
+
+sceneform.asset('sampledata/pond.obj',
+        'default',
+        'sampledata/pond.sfa',
+        'src/main/assets/pond')
+
+sceneform.asset('sampledata/volcano.obj',
+        'default',
+        'sampledata/volcano.sfa',
+        'src/main/assets/volcano')
+
+sceneform.asset('sampledata/Palm.obj',
+        'default',
+        'sampledata/Palm.sfa',
+        'src/main/assets/Palm')
+
+sceneform.asset('sampledata/Flower.obj',
+        'default',
+        'sampledata/Flower.sfa',
+        'src/main/assets/Flower')
+
+sceneform.asset('sampledata/OakTree.obj',
+        'default',
+        'sampledata/OakTree.sfa',
+        'src/main/assets/OakTree')
+
+sceneform.asset('sampledata/Beaker.obj',
+        'default',
+        'sampledata/Beaker.sfa',
+        'src/main/assets/Beaker')
+
+sceneform.asset('sampledata/Brain_Model.obj',
+        'default',
+        'sampledata/Brain_Model.sfa',
+        'src/main/assets/Brain_Model',
+        ['sampledata/Brain_Model.fbx'])

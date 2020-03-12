@@ -1,0 +1,54 @@
+{
+  animations: [
+    {
+      clips: [
+        {
+          name: 'Take 001',
+          runtime_name: 'Brain_Model',
+        },
+      ],
+      path: 'sampledata/Brain_Model.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'DefaultMaterial',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.59999999999999998,
+            0.59999999999999998,
+            0.59999999999999998,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Brain_Model.obj',
+    name: 'Brain_Model',
+    recenter: 'root',
+    scale: 0.94475799999999999,
+  },
+  version: '0.54:2',
+}

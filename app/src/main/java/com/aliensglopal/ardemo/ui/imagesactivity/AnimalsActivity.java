@@ -32,6 +32,7 @@ public class AnimalsActivity extends AppCompatActivity
             if (o instanceof String) {
                 String text = o.toString();
                 //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -40,8 +41,8 @@ public class AnimalsActivity extends AppCompatActivity
             if (o instanceof AnimalItem)
             {
                 AnimalItem item = (AnimalItem) o;
-                Intent intent = new Intent(getApplicationContext(), AugmentedActivity.class);
-                intent.putExtra("url", item.getId());
+                Intent intent = new Intent(AnimalsActivity.this, AugmentedActivity.class);
+                intent.putExtra("image_url", item.getImageName());
                 startActivity(intent);
                 finish();
             }

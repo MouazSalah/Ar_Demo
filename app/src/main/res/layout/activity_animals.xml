@@ -19,18 +19,13 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
+            android:layout_height="wrap_content"
             android:padding="14dp"
             android:id="@+id/animals_recyclerView"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
             app:adapter="@{viewModel.productsAdapter}"
-            tools:listitem="@layout/raw_item"
-            android:rowCount="3">
+            tools:listitem="@layout/raw_item">
 
         </androidx.recyclerview.widget.RecyclerView>
 

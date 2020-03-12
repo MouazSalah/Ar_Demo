@@ -2,12 +2,14 @@ package com.aliensglopal.ardemo.ui.aygmentedactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Toast;
 
 import com.aliensglopal.ardemo.R;
+import com.aliensglopal.ardemo.ui.imagesactivity.AnimalsActivity;
 import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.rendering.ModelRenderable;
@@ -21,6 +23,7 @@ public class AugmentedActivity extends AppCompatActivity
 
     ArFragment arFragment;
     ModelRenderable modelRenderable;
+    String imageUrl;
 
     @Override
     @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
@@ -29,15 +32,23 @@ public class AugmentedActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Bundle extras = getIntent().getExtras();
+        if(extras !=null) {
+            imageUrl = extras.getString("image_url");
+        }
+
+      //  Toast.makeText(this, "" + imageUrl, Toast.LENGTH_SHORT).show();
+
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ar_fragment);
 
         arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) ->
         {
-            Toast.makeText(this, "fixed", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this, "fixed", Toast.LENGTH_SHORT).show();
             Anchor anchor = hitResult.createAnchor();
 
             ModelRenderable.builder()
-                    .setSource(this, Uri.parse("ArcticFox_Posed.sfb"))
+                    .setSource(this, Uri.parse(imageUrl))
+                   // .setSource(this, Uri.parse("ArcticFox_Posed.sfb"))
                    // .setSource(this, R.drawable.ic_launcher_background)
                     .build()
                     .thenAccept(modelRenderable -> addModelToScene(anchor, modelRenderable))
@@ -63,6 +74,14 @@ public class AugmentedActivity extends AppCompatActivity
         transformableNode.setRenderable(modelRenderable);
         arFragment.getArSceneView().getScene().addChild(anchorNode);
         transformableNode.select();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent intent = new Intent(AugmentedActivity.this, AnimalsActivity.class);
+        startActivity(intent);
     }
 }
 

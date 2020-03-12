@@ -2,9 +2,9 @@
     version="1.0"
     encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <data>
@@ -21,6 +21,9 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{()->model.onItemClick()}"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp">
 
@@ -35,7 +38,9 @@
                 android:layout_width="121dp"
                 android:layout_height="106dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@{model.item.id}" />
+                app:setImage="@{model.item.id}"
+                android:scaleType="fitXY"
+                tools:src="@tools:sample/backgrounds/scenic"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -45,6 +50,7 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="14sp"
+                tools:text="@tools:sample/full_names"
                 android:fontFamily="sans-serif"/>
 
         </LinearLayout>
