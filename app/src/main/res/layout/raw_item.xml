@@ -10,7 +10,7 @@
     <data>
         <variable
             name="model"
-            type="com.aliensglopal.ardemo.viewmodel.ItemProductViewModel" />
+            type="com.aliensglopal.ardemo.viewmodel.ItemAnimalViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

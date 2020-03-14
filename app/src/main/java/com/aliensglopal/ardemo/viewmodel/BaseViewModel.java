@@ -34,13 +34,4 @@ public class BaseViewModel extends ViewModel implements Observable
         mCallBacks.remove(callback);
     }
 
-    public void notifyChange() {
-        mCallBacks.notifyChange(this, 0);
-    }
-
-    public void notifyChange(int propertyId) {
-        mCallBacks.notifyChange(this, propertyId);
-    }
-
-
 }

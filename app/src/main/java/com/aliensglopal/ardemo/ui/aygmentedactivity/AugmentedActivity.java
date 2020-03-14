@@ -18,11 +18,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 
 public class AugmentedActivity extends AppCompatActivity
 {
-    private static final String TAG = AugmentedActivity.class.getSimpleName();
-    private static final double MIN_OPENGL_VERSION = 3.0;
-
     ArFragment arFragment;
-    ModelRenderable modelRenderable;
     String imageUrl;
 
     @Override

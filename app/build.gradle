@@ -76,10 +76,6 @@ dependencies {
 }
 
 
-sceneform.asset('sampledata/ArcticFox_Posed.obj',
-        'default',
-        'sampledata/ArcticFox_Posed.sfa',
-        'src/main/assets/ArcticFox_Posed')
 
 sceneform.asset('sampledata/astronaut.obj',
         'default',
@@ -182,3 +178,4 @@ sceneform.asset('sampledata/Brain_Model.obj',
         'sampledata/Brain_Model.sfa',
         'src/main/assets/Brain_Model',
         ['sampledata/Brain_Model.fbx'])
+

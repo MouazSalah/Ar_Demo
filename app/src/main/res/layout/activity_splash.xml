@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui.splash.SplashActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="170dp"

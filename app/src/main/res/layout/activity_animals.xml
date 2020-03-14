@@ -24,7 +24,7 @@
             android:id="@+id/animals_recyclerView"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            app:adapter="@{viewModel.productsAdapter}"
+            app:adapter="@{viewModel.animalsAdapter}"
             tools:listitem="@layout/raw_item">
 
         </androidx.recyclerview.widget.RecyclerView>
